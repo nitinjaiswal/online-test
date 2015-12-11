@@ -1,0 +1,333 @@
+    {% load staticfiles %}
+
+
+
+    <script type="text/javascript">
+
+    var prev_sidebar_active_id = '1_s_1';
+    var prev_sidebar_active_no = prev_sidebar_active_id.split('_')[2];
+
+
+
+
+    var prev_section_active_id = '1_section';
+    var prev_section_active_no = prev_section_active_id.split('_')[0];
+
+     function sidebarActive(ctrl)
+    {
+      // id of form '1_s_1'
+      //id of question content is '1_question_1'
+
+      var sidebar_active_id = ctrl.id;
+      var sidebar_active_no = sidebar_active_id.split('_')[2];
+      
+      
+      
+      document.getElementById(prev_sidebar_active_id).className = document.getElementById(prev_sidebar_active_id).className.replace(' active', '');
+      
+    
+      document.getElementById(sidebar_active_id).className += ' active';
+               
+
+
+      document.getElementById(prev_section_active_no + '_question_' + prev_sidebar_active_no).style.display = 'none';
+      document.getElementById(prev_section_active_no + '_question_' + sidebar_active_no).style.display = '';
+      
+
+      prev_sidebar_active_id = sidebar_active_id;
+      prev_sidebar_active_no = prev_sidebar_active_id.split('_')[2];
+      
+
+
+    }
+
+
+
+
+
+
+
+    function section(ctrl)
+    {
+      //id of section '1_section'
+      //id of question content is '1_question_1'
+         //id of question column is 'sidebar_1'
+
+      var section_active_id = ctrl.id;
+      var section_active_no = section_active_id.split('_')[0];
+
+      document.getElementById(prev_section_active_id).className = document.getElementById(prev_section_active_id).className.replace(' background','');
+      document.getElementById(prev_section_active_id).className = document.getElementById(prev_section_active_id).className.replace(' circle','');
+
+      document.getElementById(section_active_id).className += " background";
+      document.getElementById(section_active_id).className += " circle";
+
+      if (section_active_no=='1'){
+    document.getElementById('section_title').innerHTML='EVS';
+    
+
+  }
+  if (section_active_no=='2'){
+    document.getElementById('section_title').innerHTML='CDP';
+    
+    
+  }
+
+  if (section_active_no=='3'){
+    document.getElementById('section_title').innerHTML='ENGLISH';
+    
+  }
+  if (section_active_no=='4'){
+    document.getElementById('section_title').innerHTML='HINDI';
+    
+    
+  }
+  if (section_active_no=='5'){
+    document.getElementById('section_title').innerHTML='MATHS';
+    
+    
+  }
+
+
+  document.getElementById("sidebar_" + prev_section_active_no).style.display = "none";
+  document.getElementById("sidebar_" + section_active_no).style.display = ""; 
+
+
+
+      
+
+      //displaying first question of respective section
+    
+      document.getElementById(prev_sidebar_active_id).className = document.getElementById(prev_sidebar_active_id).className.replace(' active', '');
+      document.getElementById(prev_section_active_no + '_question_' + prev_sidebar_active_no).style.display = "none";
+
+
+      document.getElementById(section_active_no + '_s_1').className += ' active';
+
+      document.getElementById(section_active_no + '_question_1').style.display = '';
+
+
+      prev_section_active_id = section_active_id;
+      prev_section_active_no = prev_section_active_id.split('_')[0];
+      prev_sidebar_active_id = prev_section_active_no + "_s_1";
+      prev_sidebar_active_no = prev_sidebar_active_id.split('_')[2];     
+
+
+
+
+    }
+
+
+    var attempted_array = [0,0,0,0,0,0,0,0,0,0];
+    var result_array = [];
+    result_array.push("{{qAnswer_array.0}}");
+    result_array.push("{{qAnswer_array.1}}");
+    result_array.push("{{qAnswer_array.2}}");
+    result_array.push("{{qAnswer_array.3}}");
+    result_array.push("{{qAnswer_array.4}}");
+    result_array.push("{{qAnswer_array.5}}");
+    result_array.push("{{qAnswer_array.6}}");
+    result_array.push("{{qAnswer_array.7}}");
+    result_array.push("{{qAnswer_array.8}}");
+    result_array.push("{{qAnswer_array.9}}");
+
+alert("{{qOption_array.0.0}}")
+
+    var marks = 0;
+    
+
+
+    function calculate(obj)
+    { var tbody = document.getElementsByTagName("tbody")[0];
+
+
+
+      var j = parseInt(prev_sidebar_active_no) - 1;
+      var i = 0;
+      var tr = tbody.getElementsByTagName("tr")[j];
+      var td_marks = tr.getElementsByTagName("td")[4];
+      var td_marked = tr.getElementsByTagName("td")[2];
+      var right = "0";
+      var marked = "Unattempted";
+
+      if (attempted_array[j] == 0)
+      { attempted_array[j] = 1;
+      
+
+      for(i=0;i<obj.length;i++)
+      
+        { if (obj[i].checked==true && obj[i].value==result_array[j])
+            {// if(obj[i].value == "A")
+            //     td_marked.innerHTML = "{{qOption_arary.0.0}}";
+            //   if(obj[i].value == "B")
+            //     td_marked.innerHTML = "{{qOption_arary.0.1}}";
+            //   if(obj[i].value == "C")
+            //     td_marked.innerHTML = "{{qOption_arary.0.2}}";
+            //   if(obj[i].value == "D")
+            //     td_marked.innerHTML = "{{qOption_arary.0.3}}";
+
+              right = "1";
+             marks ++;
+            }
+         
+        
+      }
+
+      td_marks.innerHTML = right;
+
+      for(i=0;i<obj.length;i++)
+       {  if (obj[i].checked==true)
+        {  alert("{{qOption_array.0.0}}")
+          if(obj[i].value == "A")
+               td_marked.innerHTML = "{{qOption_array.0.0}}";
+          if(obj[i].value == "B")
+               td_marked.innerHTML = "{{qOption_array.0.1}}";
+          if(obj[i].value == "C")
+               td_marked.innerHTML = "{{qOption_array.0.0}}";
+          if(obj[i].value == "D")
+               td_marked.innerHTML = "{{qOption_array.0.0}}";
+
+      document.getElementById(prev_sidebar_active_id).childNodes[0].style.color = "red";
+
+      if (parseInt(prev_sidebar_active_no) < 10 )
+       { 
+         var k = parseInt(prev_sidebar_active_no) + 1; 
+         
+
+         document.getElementById(prev_sidebar_active_id).className = document.getElementById(prev_sidebar_active_id).className.replace(' active', '');
+         document.getElementById(prev_section_active_no + "_s_" + k).className += " active";
+
+         document.getElementById(prev_section_active_no + "_question_" + prev_sidebar_active_no).style.display = "none";
+         document.getElementById(prev_section_active_no + "_question_" + k).style.display = "";
+
+         prev_sidebar_active_id = prev_section_active_no + "_s_" + k ;
+         prev_sidebar_active_no = prev_sidebar_active_id.split("_")[2];
+
+
+       }}}
+
+
+       }
+
+
+
+      
+    
+      
+    }
+
+
+
+
+    </script>
+
+
+
+    
+
+    
+
+
+
+    <script type="text/javascript">
+  function initializeClock()
+  {
+    // var clock = document.getElementById(id);
+    // var hoursSpan = clock.querySelector('.hours');
+    // var minutesSpan = clock.querySelector('.minutes');
+    // var secondsSpan = clock.querySelector('.seconds');
+
+
+
+    h = 0;
+    m = 0;
+    s = 20;
+    document.getElementById('hours').innerHTML = ('0' + h).slice(-2);
+    document.getElementById('minutes').innerHTML = ('0' + m).slice(-2);
+    document.getElementById('seconds').innerHTML = ('0' + s).slice(-2);
+    //alert("1");
+
+
+    function updateClock()
+
+    {
+      s -= 1;
+      document.getElementById('seconds').innerHTML = ('0' + s).slice(-2);
+      if(s <= 0)
+      {
+        s = 60;
+        document.getElementById('seconds').innerHTML = ('0' + s).slice(-2);
+        m -= 1;
+        document.getElementById('minutes').innerHTML = ('0' + m).slice(-2);
+        if(m < 0)
+        {
+          m = 59;
+          document.getElementById('minutes').innerHTML = ('0' + m).slice(-2);
+          h -= 1;
+          document.getElementById('hours').innerHTML = ('0' + h).slice(-2);
+
+          if(h < 0)
+          {
+            h=0;
+            m=0;
+            s=0;
+            document.getElementById('hours').innerHTML = ('0' + h).slice(-2);
+            document.getElementById('minutes').innerHTML = ('0' + m).slice(-2);
+            document.getElementById('seconds').innerHTML = ('0' + s).slice(-2);
+            clearInterval(timeinterval);
+
+            document.getElementById("total").innerHTML = "Total = " + marks; 
+
+            // window.location.href = "/result/";
+
+            document.getElementById("content").style.display="none";
+            document.getElementById("result").style.display="";
+
+
+            
+
+
+          }
+
+
+        }
+      }
+    }
+     
+    updateClock();
+    var timeinterval = setInterval(updateClock,1000);
+      
+
+  }
+  initializeClock();
+
+
+
+ 
+
+  
+
+</script>
+
+
+
+
+
+
+     
+
+    <script src="{% static 'js/emulation-modes-warning.js' %}"></script>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src='{% static "js/vendor/holder.min.js" %}'></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+    <!-- <script src="{% static 'js/own.js' %}"></script> -->
+
+   

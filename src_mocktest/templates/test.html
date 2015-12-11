@@ -1,0 +1,1062 @@
+
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="../../favicon.ico">
+      <title>Academy Plus</title>
+      <script src="{% static 'js/own.js' %}"></script>
+      {% include 'head_css.html' %}
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand">Academy PLUS</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+               <ul class="nav navbar-nav navbar-left">
+                  <li><a>About</a></li>
+                  <li><a>Profile</a></li>
+                  <li><a>Help</a></li>
+               </ul>
+               <!-- <form class="navbar-form navbar-right">
+                  <input type="text" class="form-control" placeholder="Search...">
+                  </form> -->
+            </div>
+         </div>
+      </nav>
+      <div id="content">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+               <ul id="sidebar_1"  class="nav nav-sidebar">
+                  <li id="1_s_1" onclick="sidebarActive(this)" class=" active"><a>Question 1</a></li>
+                  <li id="1_s_2" onclick="sidebarActive(this)"><a>Question 2</a></li>
+                  <li id="1_s_3" onclick="sidebarActive(this)"><a>Question 3</a></li>
+                  <li id="1_s_4" onclick="sidebarActive(this)"><a>Question 4</a></li>
+                  <li id="1_s_5" onclick="sidebarActive(this)"><a>Question 5</a></li>
+                  <li id="1_s_6" onclick="sidebarActive(this)"><a>Question 6</a></li>
+                  <li id="1_s_7" onclick="sidebarActive(this)"><a>Question 7</a></li>
+                  <li id="1_s_8" onclick="sidebarActive(this)"><a>Question 8</a></li>
+                  <li id="1_s_9" onclick="sidebarActive(this)"><a>Question 9</a></li>
+                  <li id="1_s_10" onclick="sidebarActive(this)"><a>Question 10</a></li>
+               </ul>
+               <ul id="sidebar_2" class="nav nav-sidebar" style="display:none">
+                  <li id="2_s_1" onclick="sidebarActive(this)"><a>Question 1</a></li>
+                  <li id="2_s_2" onclick="sidebarActive(this)"><a>Question 2</a></li>
+                  <li id="2_s_3" onclick="sidebarActive(this)"><a>Question 3</a></li>
+                  <li id="2_s_4" onclick="sidebarActive(this)"><a>Question 4</a></li>
+                  <li id="2_s_5" onclick="sidebarActive(this)"><a>Question 5</a></li>
+                  <li id="2_s_6" onclick="sidebarActive(this)"><a>Question 6</a></li>
+                  <li id="2_s_7" onclick="sidebarActive(this)"><a>Question 7</a></li>
+                  <li id="2_s_8" onclick="sidebarActive(this)"><a>Question 8</a></li>
+                  <li id="2_s_9" onclick="sidebarActive(this)"><a>Question 9</a></li>
+                  <li id="2_s_10" onclick="sidebarActive(this)"><a>Question 10</a></li>
+               </ul>
+               <ul id="sidebar_3" class="nav nav-sidebar" style="display:none">
+                  <li id="3_s_1" onclick="sidebarActive(this)"><a>Question 1</a></li>
+                  <li id="3_s_2" onclick="sidebarActive(this)"><a>Question 2</a></li>
+                  <li id="3_s_3" onclick="sidebarActive(this)"><a>Question 3</a></li>
+                  <li id="3_s_4" onclick="sidebarActive(this)"><a>Question 4</a></li>
+                  <li id="3_s_5" onclick="sidebarActive(this)"><a>Question 5</a></li>
+                  <li id="3_s_6" onclick="sidebarActive(this)"><a>Question 6</a></li>
+                  <li id="3_s_7" onclick="sidebarActive(this)"><a>Question 7</a></li>
+                  <li id="3_s_8" onclick="sidebarActive(this)"><a>Question 8</a></li>
+                  <li id="3_s_9" onclick="sidebarActive(this)"><a>Question 9</a></li>
+                  <li id="3_s_10" onclick="sidebarActive(this)"><a>Question 10</a></li>
+               </ul>
+               <ul id="sidebar_4" class="nav nav-sidebar" style="display:none">
+                  <li id="4_s_1" onclick="sidebarActive(this)"><a>Question 1</a></li>
+                  <li id="4_s_2" onclick="sidebarActive(this)"><a>Question 2</a></li>
+                  <li id="4_s_3" onclick="sidebarActive(this)"><a>Question 3</a></li>
+                  <li id="4_s_4" onclick="sidebarActive(this)"><a>Question 4</a></li>
+                  <li id="4_s_5" onclick="sidebarActive(this)"><a>Question 5</a></li>
+                  <li id="4_s_6" onclick="sidebarActive(this)"><a>Question 6</a></li>
+                  <li id="4_s_7" onclick="sidebarActive(this)"><a>Question 7</a></li>
+                  <li id="4_s_8" onclick="sidebarActive(this)"><a>Question 8</a></li>
+                  <li id="4_s_9" onclick="sidebarActive(this)"><a>Question 9</a></li>
+                  <li id="4_s_10" onclick="sidebarActive(this)"><a>Question 10</a></li>
+               </ul>
+               <ul id="sidebar_5" class="nav nav-sidebar" style="display:none">
+                  <li id="5_s_1" onclick="sidebarActive(this)"><a>Question 1</a></li>
+                  <li id="5_s_2" onclick="sidebarActive(this)"><a>Question 2</a></li>
+                  <li id="5_s_3" onclick="sidebarActive(this)"><a>Question 3</a></li>
+                  <li id="5_s_4" onclick="sidebarActive(this)"><a>Question 4</a></li>
+                  <li id="5_s_5" onclick="sidebarActive(this)"><a>Question 5</a></li>
+                  <li id="5_s_6" onclick="sidebarActive(this)"><a>Question 6</a></li>
+                  <li id="5_s_7" onclick="sidebarActive(this)"><a>Question 7</a></li>
+                  <li id="5_s_8" onclick="sidebarActive(this)"><a>Question 8</a></li>
+                  <li id="5_s_9" onclick="sidebarActive(this)"><a>Question 9</a></li>
+                  <li id="5_s_10" onclick="sidebarActive(this)"><a>Question 10</a></li>
+               </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+               <div class="row">
+                  <div class="col-sm-10">
+                     <h1 class="page-header">CTET MOCKTEST 2015</h1>
+                  </div>
+                  <div class="col-sm-2">
+                     Time left => <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>  
+                  </div>
+               </div>
+               <div class="row placeholders">
+                  <div id="1_section" class="circle col-xs-6 col-sm-2 placeholder background cursor" onclick='section(this)'>
+                     <div>Section 1</div>
+                     <!-- <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail"> -->
+                     <h4>EVS</h4>
+                     <!-- <span class="text-muted">Something else</span> -->
+                  </div>
+                  <div id="2_section" class="col-xs-6 col-sm-2 placeholder cursor" onclick='section(this)'>
+                     <div>Section 2</div>
+                     <!-- <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail"> -->
+                     <h4>CDP</h4>
+                     <!-- <span class="text-muted">Something else</span> -->
+                  </div>
+                  <div id="3_section" class="col-xs-6 col-sm-2 placeholder cursor" onclick='section(this)'>
+                     <div>Section 3</div>
+                     <!-- <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail"> -->
+                     <h4>ENGLISH</h4>
+                     <!-- <span class="text-muted">Something else</span> -->
+                  </div>
+                  <div id="4_section" class="col-xs-6 col-sm-2 placeholder cursor" onclick='section(this)'>
+                     <div>Section 4</div>
+                     <!-- <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail"> -->
+                     <h4>HINDI</h4>
+                     <!-- <span class="text-muted">Something else</span> -->
+                  </div>
+                  <div id="5_section" class="col-xs-6 col-sm-2 placeholder cursor" onclick='section(this)'>
+                     <div>Section 5</div>
+                     <!-- <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail"> -->
+                     <h4>MATHS</h4>
+                     <!-- <span class="text-muted">Something else</span> -->
+                  </div>
+               </div>
+               <h2 id="section_title"  class="sub-header">EVS</h2>
+               <div id="1_question_1" >
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.0 %}
+                  <div class="row">
+                     <div class="col-sm-6">
+                        In English<br/><br/>
+                        1) {{instance.qEnglish}}
+                        <br/><br>
+                        <form onsubmit="calculate(this)" action="javascript:void(0);">  {% csrf_token %}  
+                           <input type="radio" name="s_1"  value="A" > {{qOption_array.0.0}}<br/>
+                           <input type="radio" name="s_1"  value="B" >{{qOption_array.0.1}}<br/>
+                           <input type="radio" name="s_1"  value="c" >{{qOption_array.0.2}}<br/>
+                           <input type="radio" name="s_1"  value="D" >{{qOption_array.0.3}}<br/><br/><br/>
+                           <input class="btn btn-primary" type="submit" value="submit"/>
+                        </form>
+                        {{qAnswer_array}}         
+                     </div>
+                     <div class="col-sm-6">In Hindi<br/><br/>
+                        {{instance.qHindi}}
+                        <br/><br>
+                        {{qOption_array.0.0}}<br/>
+                        {{qOption_array.0.1}}<br/>
+                        {{qOption_array.0.2}}<br/>
+                        {{qOption_array.0.3}}
+                     </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+               </div>
+               <div id="1_question_2" style="display:none" >
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.1 %}
+                  <div class="row">
+                     <div class="col-sm-6">
+                        In English<br/><br/>
+                        2) {{instance.qEnglish}}
+                        <br/><br>
+                        <form onsubmit="calculate(this)" action="javascript:void(0);">  {% csrf_token %}  
+                           <input type="radio" name="s_2"  value="A" > {{qOption_array.1.0}}<br/>
+                           <input type="radio" name="s_2"  value="B" >{{qOption_array.1.1}}<br/>
+                           <input type="radio" name="s_2"  value="c" >{{qOption_array.1.2}}<br/>
+                           <input type="radio" name="s_2"  value="D" >{{qOption_array.1.3}}<br/><br/><br/>
+                           <input class="btn btn-primary" type="submit" value="submit"/>
+                        </form>
+                        {{qAnswer_array}}         
+                     </div>
+                     <div class="col-sm-6">In Hindi<br/><br/>
+                        {{instance.qHindi}}
+                        <br/><br>
+                        {{qOption_array.1.0}}<br/>
+                        {{qOption_array.1.1}}<br/>
+                        {{qOption_array.1.2}}<br/>
+                        {{qOption_array.1.3}}
+                     </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+               </div>
+               <div id="1_question_3" style="display:none" >
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.2 %}
+                  <div class="row">
+                     <div class="col-sm-6">
+                        In English<br/><br/>
+                        3) {{instance.qEnglish}}
+                        <br/><br>
+                        <form onsubmit="calculate(this)" action="javascript:void(0);">  {% csrf_token %}  
+                           <input type="radio" name="s_3"  value="A" > {{qOption_array.2.0}}<br/>
+                           <input type="radio" name="s_3"  value="B" >{{qOption_array.2.1}}<br/>
+                           <input type="radio" name="s_3"  value="c" >{{qOption_array.2.2}}<br/>
+                           <input type="radio" name="s_3"  value="D" >{{qOption_array.2.3}}<br/><br/><br/>
+                           <input class="btn btn-primary" type="submit" value="submit"/>
+                        </form>
+                        {{qAnswer_array}}         
+                     </div>
+                     <div class="col-sm-6">In Hindi<br/><br/>
+                        {{instance.qHindi}}
+                        <br/><br>
+                        {{qOption_array.2.0}}<br/>
+                        {{qOption_array.2.1}}<br/>
+                        {{qOption_array.2.2}}<br/>
+                        {{qOption_array.2.3}}
+                     </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+               </div>
+               <div id="1_question_4" style="display:none" >
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.3 %}
+                  <div class="row">
+                     <div class="col-sm-6">
+                        In English<br/><br/>
+                        4) {{instance.qEnglish}}
+                        <br/><br>
+                        <form onsubmit="calculate(this)" action="javascript:void(0);">  {% csrf_token %}  
+                           <input type="radio" name="s_4"  value="A" > {{qOption_array.3.0}}<br/>
+                           <input type="radio" name="s_4"  value="B" >{{qOption_array.3.1}}<br/>
+                           <input type="radio" name="s_4"  value="c" >{{qOption_array.3.2}}<br/>
+                           <input type="radio" name="s_4"  value="D" >{{qOption_array.3.3}}<br/><br/><br/>
+                           <input class="btn btn-primary" type="submit" value="submit"/>
+                        </form>
+                        {{qAnswer_array}}         
+                     </div>
+                     <div class="col-sm-6">In Hindi<br/><br/>
+                        {{instance.qHindi}}
+                        <br/><br>
+                        {{qOption_array.3.0}}<br/>
+                        {{qOption_array.3.1}}<br/>
+                        {{qOption_array.3.2}}<br/>
+                        {{qOption_array.3.3}}
+                     </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+               </div>
+               <div id="1_question_5" style="display:none" >
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.4 %}
+                  <div class="row">
+                     <div class="col-sm-6">
+                        In English<br/><br/>
+                        5) {{instance.qEnglish}}
+                        <br/><br>
+                        <form onsubmit="calculate(this)" action="javascript:void(0);">  {% csrf_token %}  
+                           <input type="radio" name="s_5"  value="A" > {{qOption_array.4.0}}<br/>
+                           <input type="radio" name="s_5"  value="B" >{{qOption_array.4.1}}<br/>
+                           <input type="radio" name="s_5"  value="c" >{{qOption_array.4.2}}<br/>
+                           <input type="radio" name="s_5"  value="D" >{{qOption_array.4.3}}<br/><br/><br/>
+                           <input class="btn btn-primary" type="submit" value="submit"/>
+                        </form>
+                        {{qAnswer_array}}         
+                     </div>
+                     <div class="col-sm-6">In Hindi<br/><br/>
+                        {{instance.qHindi}}
+                        <br/><br>
+                        {{qOption_array.4.0}}<br/>
+                        {{qOption_array.4.1}}<br/>
+                        {{qOption_array.4.2}}<br/>
+                        {{qOption_array.4.3}}
+                     </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+               </div>
+               <div id="1_question_6" style="display:none" >
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.5 %}
+                  <div class="row">
+                     <div class="col-sm-6">
+                        In English<br/><br/>
+                        6) {{instance.qEnglish}}
+                        <br/><br>
+                        <form onsubmit="calculate(this)" action="javascript:void(0);">  {% csrf_token %}  
+                           <input type="radio" name="s_6"  value="A" > {{qOption_array.5.0}}<br/>
+                           <input type="radio" name="s_6"  value="B" >{{qOption_array.5.1}}<br/>
+                           <input type="radio" name="s_6"  value="c" >{{qOption_array.5.2}}<br/>
+                           <input type="radio" name="s_6"  value="D" >{{qOption_array.5.3}}<br/><br/><br/>
+                           <input class="btn btn-primary" type="submit" value="submit"/>
+                        </form>
+                        {{qAnswer_array}}         
+                     </div>
+                     <div class="col-sm-6">In Hindi<br/><br/>
+                        {{instance.qHindi}}
+                        <br/><br>
+                        {{qOption_array.5.0}}<br/>
+                        {{qOption_array.5.1}}<br/>
+                        {{qOption_array.5.2}}<br/>
+                        {{qOption_array.5.3}}
+                     </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+               </div>
+               <div id="1_question_7" style="display:none" >
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.6 %}
+                  <div class="row">
+                     <div class="col-sm-6">
+                        In English<br/><br/>
+                        7) {{instance.qEnglish}}
+                        <br/><br>
+                        <form onsubmit="calculate(this)" action="javascript:void(0);">  {% csrf_token %}  
+                           <input type="radio" name="s_7"  value="A" > {{qOption_array.6.0}}<br/>
+                           <input type="radio" name="s_7"  value="B" >{{qOption_array.6.1}}<br/>
+                           <input type="radio" name="s_7"  value="c" >{{qOption_array.6.2}}<br/>
+                           <input type="radio" name="s_7"  value="D" >{{qOption_array.6.3}}<br/><br/><br/>
+                           <input class="btn btn-primary" type="submit" value="submit"/>
+                        </form>
+                        {{qAnswer_array}}         
+                     </div>
+                     <div class="col-sm-6">In Hindi<br/><br/>
+                        {{instance.qHindi}}
+                        <br/><br>
+                        {{qOption_array.6.0}}<br/>
+                        {{qOption_array.6.1}}<br/>
+                        {{qOption_array.6.2}}<br/>
+                        {{qOption_array.6.3}}
+                     </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+               </div>
+               <div id="1_question_8" style="display:none" >
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.7 %}
+                  <div class="row">
+                     <div class="col-sm-6">
+                        In English<br/><br/>
+                        8) {{instance.qEnglish}}
+                        <br/><br>
+                        <form onsubmit="calculate(this)" action="javascript:void(0);">  {% csrf_token %}  
+                           <input type="radio" name="s_8"  value="A" > {{qOption_array.7.0}}<br/>
+                           <input type="radio" name="s_8"  value="B" >{{qOption_array.7.1}}<br/>
+                           <input type="radio" name="s_8"  value="c" >{{qOption_array.7.2}}<br/>
+                           <input type="radio" name="s_8"  value="D" >{{qOption_array.7.3}}<br/><br/><br/>
+                           <input class="btn btn-primary" type="submit" value="submit"/>
+                        </form>
+                        {{qAnswer_array}}         
+                     </div>
+                     <div class="col-sm-6">In Hindi<br/><br/>
+                        {{instance.qHindi}}
+                        <br/><br>
+                        {{qOption_array.7.0}}<br/>
+                        {{qOption_array.7.1}}<br/>
+                        {{qOption_array.7.2}}<br/>
+                        {{qOption_array.7.3}}
+                     </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+               </div>
+               <div id="1_question_9" style="display:none" >
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.8 %}
+                  <div class="row">
+                     <div class="col-sm-6">
+                        In English<br/><br/>
+                        9) {{instance.qEnglish}}
+                        <br/><br>
+                        <form onsubmit="calculate(this)" action="javascript:void(0);">  {% csrf_token %}  
+                           <input type="radio" name="s_9"  value="A" > {{qOption_array.8.0}}<br/>
+                           <input type="radio" name="s_9"  value="B" >{{qOption_array.8.1}}<br/>
+                           <input type="radio" name="s_9"  value="c" >{{qOption_array.8.2}}<br/>
+                           <input type="radio" name="s_9"  value="D" >{{qOption_array.8.3}}<br/><br/><br/>
+                           <input class="btn btn-primary" type="submit" value="submit"/>
+                        </form>
+                        {{qAnswer_array}}         
+                     </div>
+                     <div class="col-sm-6">In Hindi<br/><br/>
+                        {{instance.qHindi}}
+                        <br/><br>
+                        {{qOption_array.8.0}}<br/>
+                        {{qOption_array.8.1}}<br/>
+                        {{qOption_array.8.2}}<br/>
+                        {{qOption_array.8.3}}
+                     </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+               </div>
+               <div id="1_question_10" style="display:none" >
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.9 %}
+                  <div class="row">
+                     <div class="col-sm-6">
+                        In English<br/><br/>
+                        10) {{instance.qEnglish}}
+                        <br/><br>
+                        <form onsubmit="calculate(this)" action="javascript:void(0);">  {% csrf_token %}  
+                           <input type="radio" name="s_10"  value="A" > {{qOption_array.9.0}}<br/>
+                           <input type="radio" name="s_10"  value="B" >{{qOption_array.9.1}}<br/>
+                           <input type="radio" name="s_0"  value="c" >{{qOption_array.9.2}}<br/>
+                           <input type="radio" name="s_10"  value="D" >{{qOption_array.9.3}}<br/><br/><br/>
+                           <input class="btn btn-primary" type="submit" value="submit"/>
+                        </form>
+                        {{qAnswer_array}}         
+                     </div>
+                     <div class="col-sm-6">In Hindi<br/><br/>
+                        {{instance.qHindi}}
+                        <br/><br>
+                        {{qOption_array.9.0}}<br/>
+                        {{qOption_array.9.1}}<br/>
+                        {{qOption_array.9.2}}<br/>
+                        {{qOption_array.9.3}}
+                     </div>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+               </div>
+               <div id="2_question_1" style="display:none" >
+                  section 2   question 1
+               </div>
+               <div id="2_question_2" style="display:none" >
+                  section 2   question 2
+               </div>
+               <div id="2_question_3" style="display:none" >
+                  section 2   question 3
+               </div>
+               <div id="2_question_4" style="display:none" >
+                  section 2   question 4
+               </div>
+               <div id="2_question_5" style="display:none" >
+                  section 2   question 5
+               </div>
+               <div id="2_question_6" style="display:none" >
+                  section 2   question 6
+               </div>
+               <div id="2_question_7" style="display:none" >
+                  section 2   question 7
+               </div>
+               <div id="2_question_8" style="display:none" >
+                  section 2   question 8
+               </div>
+               <div id="2_question_9" style="display:none" >
+                  section 2   question 9
+               </div>
+               <div id="2_question_10" style="display:none" >
+                  section 2   question 10
+               </div>
+               <div id="3_question_1" style="display:none" >
+                  section 3   question 1
+               </div>
+               <div id="3_question_2" style="display:none" >
+                  section 3   question 2
+               </div>
+               <div id="3_question_3" style="display:none" >
+                  section 3   question 3
+               </div>
+               <div id="3_question_4" style="display:none" >
+                  section 3   question 4
+               </div>
+               <div id="3_question_5" style="display:none" >
+                  section 3   question 5
+               </div>
+               <div id="3_question_6" style="display:none" >
+                  section 3   question 6
+               </div>
+               <div id="3_question_7" style="display:none" >
+                  section 3   question 7
+               </div>
+               <div id="3_question_8" style="display:none" >
+                  section 3   question 8
+               </div>
+               <div id="3_question_9" style="display:none" >
+                  section 3   question 9
+               </div>
+               <div id="3_question_10" style="display:none" >
+                  section 3   question 10
+               </div>
+               <div id="4_question_1" style="display:none" >
+                  section 4   question 1
+               </div>
+               <div id="4_question_2" style="display:none" >
+                  section 4   question 2
+               </div>
+               <div id="4_question_3" style="display:none" >
+                  section 4   question 3
+               </div>
+               <div id="4_question_4" style="display:none" >
+                  section 4   question 4
+               </div>
+               <div id="4_question_5" style="display:none" >
+                  section 4   question 5
+               </div>
+               <div id="4_question_6" style="display:none" >
+                  section 4   question 6
+               </div>
+               <div id="4_question_7" style="display:none" >
+                  section 4   question 7
+               </div>
+               <div id="4_question_8" style="display:none" >
+                  section 4   question 8
+               </div>
+               <div id="4_question_9" style="display:none" >
+                  section 4   question 9
+               </div>
+               <div id="4_question_10" style="display:none" >
+                  section 4   question 10
+               </div>
+               <div id="5_question_1" style="display:none" >
+                  section 5   question 1
+               </div>
+               <div id="5_question_2" style="display:none" >
+                  section 5   question 2
+               </div>
+               <div id="5_question_3" style="display:none" >
+                  section 5   question 3
+               </div>
+               <div id="5_question_4" style="display:none" >
+                  section 5   question 4
+               </div>
+               <div id="5_question_5" style="display:none" >
+                  section 5   question 5
+               </div>
+               <div id="5_question_6" style="display:none" >
+                  section 5   question 6
+               </div>
+               <div id="5_question_7" style="display:none" >
+                  section 5   question 7
+               </div>
+               <div id="5_question_8" style="display:none" >
+                  section 5   question 8
+               </div>
+               <div id="5_question_9" style="display:none" >
+                  section 5   question 9
+               </div>
+               <div id="5_question_10" style="display:none" >
+                  section 5   question 10
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <div id="result" style="display:none;">
+
+      <h2 id="total"></h2>  <br/>
+
+
+         <h3 class="sub-header">section 1 : EVS</h3>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  
+                  <th>Ques no.</th>
+                  <th>Question</th>                  
+                  <th>Marked</th>
+                  <th>Answer</th>
+                  <th>Marks</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.0 %}
+                  <td>1</td>
+                  <td>{{instance.qEnglish}}</td>
+                  <td>unattempted</td>
+                  {% if qAnswer_array.0 == "D" %}
+                  <td>{{qOption_arrat.0.3}}</td>
+                  {% endif %}
+                  <td>0</td>
+                  {% endif %}
+                  {% endfor %}
+                </tr>
+                
+                <tr>
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.1 %}
+                  <td>2</td>
+                  <td>{{instance.qEnglish}}</td>
+                  <td>unattempted</td>
+                  <td>dolor</td>
+                  <td>0</td>
+                  {% endif %}
+                  {% endfor %}
+                </tr>
+                <tr>
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.2 %}
+                  <td>3</td>
+                  <td>{{instance.qEnglish}}</td>
+                  <td>unattempted</td>
+                  <td>dolor</td>
+                  <td>0</td>
+                  {% endif %}
+                  {% endfor %}
+                </tr>
+                <tr>
+                  {% for instance in queryset %}
+                  {% if instance.qid == ar1.3 %}
+                  <td>4</td>
+                  <td>{{instance.qEnglish}}</td>
+                  <td>unattempted</td>
+                  <td>dolor</td>
+                  <td>0</td>
+                  {% endif %}
+                  {% endfor %}
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>dapibus</td>
+                  <td>unattempted</td>
+                  <td>Sed</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Nulla</td>
+                  <td>unattempted</td>
+                  <td>sem</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>nibh</td>
+                  <td>unattempted</td>
+                  <td>imperdiet</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>sagittis</td>
+                  <td>unattempted</td>
+                  <td>Praesent</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Fusce</td>
+                  <td>unattempted</td>
+                  <td>tellus</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>augue</td>
+                  <td>unattempted</td>
+                  <td>porta</td>
+                  <td>0</td>
+                </tr>
+                
+                
+              </tbody>
+            </table>
+          </div>
+
+
+
+
+          
+
+         <br/><br/>
+          <h3 class="sub-header">section 2 : CDP</h3>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Ques no.</th>
+                  <th>Question</th>
+                  <th>Marked</th>
+                  <th>Answer</th>
+                  <th>Marks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Lorem</td>
+                  <td>unattempted</td>
+                  <td>dolor</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>dapibus</td>
+                  <td>unattempted</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>sagittis</td>
+                  <td>unattempted</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                  <td>Mauris</td>
+                </tr>
+                
+                
+              </tbody>
+            </table>
+          </div>
+
+
+
+          <br/><br/>
+          <h3 class="sub-header">section 3 : ENGLISH</h3>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Ques no.</th>
+                  <th>Question</th>
+                  <th>Marked</th>
+                  <th>Answer</th>
+                  <th>Marks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Lorem</td>
+                  <td>unattempted</td>
+                  <td>dolor</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>dapibus</td>
+                  <td>unattempted</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>sagittis</td>
+                  <td>unattempted</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                  <td>Mauris</td>
+                </tr>
+                
+                
+              </tbody>
+            </table>
+          </div>
+
+
+
+          <br/><br/>
+          <h3 class="sub-header">section 4 : HINDI</h3>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Ques no.</th>
+                  <th>Question</th>
+                  <th>Marked</th>
+                  <th>Answer</th>
+                  <th>Marks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Lorem</td>
+                  <td>unattempted</td>
+                  <td>dolor</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>dapibus</td>
+                  <td>unattempted</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>sagittis</td>
+                  <td>unattempted</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                  <td>Mauris</td>
+                </tr>
+                
+                
+              </tbody>
+            </table>
+          </div>
+
+
+          <br/><br/>
+          <h3 class="sub-header">section 5 : MATHS</h3>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Ques no.</th>
+                  <th>Question</th>
+                  <th>Marked</th>
+                  <th>Answer</th>
+                  <th>Marks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Lorem</td>
+                  <td>unattempted</td>
+                  <td>dolor</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>dapibus</td>
+                  <td>unattempted</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>sagittis</td>
+                  <td>unattempted</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                  <td>Mauris</td>
+                </tr>
+                
+                
+              </tbody>
+            </table>
+          </div>
+
+
+
+   </div>
+      
+      {% include 'head_js.html' %}     
+   </body>
+</html>
+
